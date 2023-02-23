@@ -1,0 +1,17 @@
+version: '3'
+services:
+  ingress_api:
+    image: mophos/r7platform-ingress-api
+    environment:
+      - NODE_ENV=production
+      - R7PLATFORM_INGR_REDIS_HOST=127.0.0.1
+      - R7PLATFORM_INGR_REDIS_PASSWORD=xxxxxx
+      - R7PLATFORM_METADATA_REDIS_HOST=127.0.0.1
+      - R7PLATFORM_METADATA_REDIS_PASSWORD=xxxxxx
+      - R7PLATFORM_LOG_REDIS_HOST=127.0.0.1
+      - R7PLATFORM_LOG_REDIS_PASSWORD=xxxxxx
+      - R7PLATFORM_INGR_SERVICE_HOSTNAME=INGRESS-R7
+      - R7PLATFORM_INGR_SECRET_KEY=xxxxxxxxxxx
+    ports:
+      - 3000:3000
+    restart: always
