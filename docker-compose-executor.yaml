@@ -1,0 +1,16 @@
+version: '3'
+services:
+    executor_roiet:
+      image: mophos/r7platform-grpc-executor
+      environment:
+        - NODE_ENV=production
+        - R7PLATFORM_GRPC_EXECUTOR_DB_HOST=192.168.8.1
+        - R7PLATFORM_GRPC_EXECUTOR_DB_PORT=5432
+        - R7PLATFORM_GRPC_EXECUTOR_DB_NAME=r7platform
+        - R7PLATFORM_GRPC_EXECUTOR_DB_SCHEMA=rawdata
+        - R7PLATFORM_GRPC_EXECUTOR_DB_USER=postgres
+        - R7PLATFORM_GRPC_EXECUTOR_DB_PASSWORD=postgres
+        - R7PLATFORM_GRPC_EXECUTOR_DB_POOL_MIN=2
+        - R7PLATFORM_GRPC_EXECUTOR_DB_POOL_MAX=10
+        - R7PLATFORM_GRPC_EXECUTOR_SECRET_KEY=xxxxxxxxxxxx
+      restart: always

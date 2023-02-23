@@ -1,0 +1,16 @@
+version: '3'
+services:
+  ingress_api:
+    image: mophos/r7platform-worker
+    environment:
+      - NODE_ENV=production
+      - R7PLATFORM_WORKER_ZONE=MAHASARAKHAM
+      - R7PLATFORM_WORKER_REDIS_HOST=192.168.5.1
+      - R7PLATFORM_WORKER_REDIS_PASSWORD=xxxxxx
+      - R7PLATFORM_WORKER_LOG_REDIS_HOST=192.168.5.1
+      - R7PLATFORM_WORKER_LOG_REDIS_PASSWORD=xxxxxx
+      - R7PLATFORM_WORKER_NOTIFY_REDIS_HOST=192.168.5.1
+      - R7PLATFORM_WORKER_NOTIFY_REDIS_PASSWORD=xxxxxx
+      - R7PLATFORM_WORKER_GRPC_SERVER=127.0.0.1:50051
+      - R7PLATFORM_WORKER_API_KEY=###jwt#####
+    restart: always
