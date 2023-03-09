@@ -1,1 +1,30 @@
+version: '3'
+services:
+  portal_web:
+    image: mophos/r7platform-portal-web
+    ports:
+      - 4006:80
+    restart: always
 
+  portal_api:
+    image: mophos/r7platform-portal-api
+    environment:
+      - NODE_ENV=production
+      - R7PLATFORM_PORTAL_API_DB_HOST=localhost
+      - R7PLATFORM_PORTAL_API_DB_PORT=5432
+      - R7PLATFORM_PORTAL_API_DB_NAME=r7platform
+      - R7PLATFORM_PORTAL_API_DB_SCHEMA=libs
+      - R7PLATFORM_PORTAL_API_DB_USER=xxxx
+      - R7PLATFORM_PORTAL_API_DB_PASSWORD=xxxxx
+      - R7PLATFORM_PORTAL_API_DB_DEBUG=N
+      - R7PLATFORM_PORTAL_API_DB_RAW_HOST=localhost
+      - R7PLATFORM_PORTAL_API_DB_RAW_PORT=5433
+      - R7PLATFORM_PORTAL_API_DB_RAW_NAME=r7platform
+      - R7PLATFORM_PORTAL_API_DB_RAW_SCHEMA=rawdata
+      - R7PLATFORM_PORTAL_API_DB_RAW_USER=xxxxx
+      - R7PLATFORM_PORTAL_API_DB_RAW_PASSWORD=xxxxx
+      - R7PLATFORM_PORTAL_API_SECRET_KEY=xxxxxxxx
+      - R7PLATFORM_PORTAL_API_LOGIN_ENDPOINT=https://r7.moph.go.th/platform/auth
+    ports:
+      - 4007:3000
+    restart: always
