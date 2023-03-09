@@ -1,0 +1,54 @@
+version: '3'
+services:
+  
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - 8088:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    restart: always
+    networks: 
+      r7platform-usm-network:
+        ipv4_address: 192.168.99.1
+
+  usmweb:
+    image: mophos/r7platform-usm-web
+    restart: always
+    depends_on:
+      - nginx
+    networks: 
+      r7platform-usm-network:
+        ipv4_address: 192.168.99.2
+      
+  usmapi:
+    image: mophos/r7platform-usm-api
+    environment:
+      - NODE_ENV=production
+      - R7PLATFORM_PORTAL_API_DB_HOST=192.168.1.122
+      - R7PLATFORM_PORTAL_API_DB_PORT=5432
+      - R7PLATFORM_PORTAL_API_DB_NAME=r7platform
+      - R7PLATFORM_PORTAL_API_DB_SCHEMA=libs
+      - R7PLATFORM_PORTAL_API_DB_USER=postgres
+      - R7PLATFORM_PORTAL_API_DB_PASSWORD=xxxxx
+      - R7PLATFORM_PORTAL_API_DB_RAW_HOST=192.168.1.122
+      - R7PLATFORM_PORTAL_API_DB_RAW_PORT=5432
+      - R7PLATFORM_PORTAL_API_DB_RAW_NAME=r7platform
+      - R7PLATFORM_PORTAL_API_DB_RAW_SCHEMA=rawdata
+      - R7PLATFORM_PORTAL_API_DB_RAW_USER=postgres
+      - R7PLATFORM_PORTAL_API_DB_RAW_PASSWORD=xxxxxx
+      - R7PLATFORM_PORTAL_API_SECRET_KEY=xxxxxxxxx
+      - R7PLATFORM_PORTAL_API_LOGIN_ENDPOINT=https://r7.moph.go.th/platform/auth
+    restart: always
+    depends_on:
+      - nginx
+    networks: 
+      r7platform-usm-network:
+        ipv4_address: 192.168.99.3
+
+networks:
+  r7platform-usm-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.99.0/24
