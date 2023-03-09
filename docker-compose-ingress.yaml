@@ -11,7 +11,7 @@ services:
       - R7PLATFORM_LOG_REDIS_HOST=127.0.0.1
       - R7PLATFORM_LOG_REDIS_PASSWORD=xxxxxx
       - R7PLATFORM_INGR_SERVICE_HOSTNAME=INGRESS-R7
-      - R7PLATFORM_INGR_SECRET_KEY=xxxxxxxxxxx
+      - R7PLATFORM_INGR_INTROSPECT_ENDPOINT=https://r7.moph.go.th/platform/auth/token/introspect
     ports:
       - 3000:3000
     restart: always
