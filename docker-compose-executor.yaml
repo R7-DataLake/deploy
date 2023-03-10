@@ -13,6 +13,7 @@ services:
         - R7PLATFORM_GRPC_EXECUTOR_DB_POOL_MIN=2
         - R7PLATFORM_GRPC_EXECUTOR_DB_POOL_MAX=10
         - R7PLATFORM_GRPC_EXECUTOR_SECRET_KEY=xxxxxxxxxxxx
+        - R7PLATFORM_GRPC_EXECUTOR_DB_DEBUG=N
       ports:
         - 50051:50051
       restart: always
