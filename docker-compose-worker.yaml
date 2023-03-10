@@ -4,7 +4,7 @@ services:
     image: mophos/r7platform-worker
     environment:
       - NODE_ENV=production
-      - R7PLATFORM_WORKER_ZONE=MAHASARAKHAM
+      - R7PLATFORM_WORKER_ZONE=XXXXXXX
       - R7PLATFORM_WORKER_REDIS_HOST=192.168.5.1
       - R7PLATFORM_WORKER_REDIS_PASSWORD=xxxxxx
       - R7PLATFORM_WORKER_LOG_REDIS_HOST=192.168.5.1
