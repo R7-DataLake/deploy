@@ -7,12 +7,13 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     restart: always
+    links:
+      - portalweb
+      - portalapi
 
   portalweb:
     image: mophos/r7platform-portal-web
     restart: always
-    depends_on:
-      - nginx
       
   portalapi:
     image: mophos/r7platform-portal-api
@@ -35,6 +36,3 @@ services:
     restart: always
     extra_hosts: 
       - "host.docker.internal:host-gateway"
-    depends_on:
-      - nginx
-     
