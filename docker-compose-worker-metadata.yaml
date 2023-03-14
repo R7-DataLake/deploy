@@ -1,0 +1,16 @@
+version: '3'
+services:
+  worker:
+    image: mophos/r7platform-worker-metadata
+    environment:
+      - NODE_ENV=production
+      - R7PLATFORM_WORKER_METADATA_REDIS_HOST=localhost
+      - R7PLATFORM_WORKER_METADATA_REDIS_PASSWORD=xxxxx
+      - R7PLATFORM_WORKER_METADATA_DB_HOST=localhost
+      - R7PLATFORM_WORKER_METADATA_DB_USER=xxxx
+      - R7PLATFORM_WORKER_METADATA_DB_PASSWORD=xxxx
+      - R7PLATFORM_WORKER_METADATA_DB_PORT=5432
+      - R7PLATFORM_WORKER_METADATA_DB_NAME=r7_platforms
+      - R7PLATFORM_WORKER_METADATA_DB_SCHEMA=metadata
+      - R7PLATFORM_WORKER_METADATA_CONCURRENCY=4
+    restart: always
