@@ -1,6 +1,6 @@
 version: '3'
 services:
-  worker:
+  worker-metadata:
     image: mophos/r7platform-worker-metadata
     environment:
       - NODE_ENV=production

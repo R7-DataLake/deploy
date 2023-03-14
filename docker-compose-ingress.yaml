@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ingress_api:
+  ingress:
     image: mophos/r7platform-ingress-api
     environment:
       - NODE_ENV=production

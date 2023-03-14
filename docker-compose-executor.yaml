@@ -1,6 +1,6 @@
 version: '3'
 services:
-    executor_roiet:
+    executor:
       image: mophos/r7platform-grpc-executor
       environment:
         - NODE_ENV=production
