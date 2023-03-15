@@ -1,0 +1,638 @@
+_type: export
+__export_format: 4
+__export_date: 2023-03-15T12:35:24.005Z
+__export_source: insomnia.desktop.app:v2023.1.0
+resources:
+  - _id: req_d35bb030fa5a4fbc82c30442c07fcee1
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678882251162
+    created: 1678882148302
+    url: "{{ _.apiEndpoint }}/api/standard/v1/person"
+    name: ส่งข้อมูลแฟ้ม PERSON
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"CID": "3440400285538",
+        		"TITLE": "นาย1",
+        		"FNAME": "ทดสอบ1",
+        		"LNAME": "ไม่เอาจริง1",
+        		"BIRTH": "19880109",
+        		"SEX": "1",
+        		"MARRIAGE": "2",
+        		"OCCUPATION": "101",
+        		"NATION": "99",
+        		"IDTYPE": "1",
+        		"CHANGWAT": "44",
+        		"AMPHUR": "04",
+        		"TAMBOL": "09",
+        		"MOO": "21",
+        		"TYPEAREA": "1",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881202719.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8b42d437d0854126bda5146cc71d59e9
+    parentId: wrk_17c3b1cf7360414db8cf9750a65feaf5
+    modified: 1678882248677
+    created: 1678882248677
+    name: ส่งข้อมูล
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1678882248677
+    _type: request_group
+  - _id: wrk_17c3b1cf7360414db8cf9750a65feaf5
+    parentId: null
+    modified: 1678881057247
+    created: 1678880994173
+    name: API ส่งข้อมูล (สำหรับทดสอบ)
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_67d79e80df17469abe0e2c5a58e857bb
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678883662825
+    created: 1678883459651
+    url: "{{ _.apiEndpoint }}/api/standard/v1/chronic"
+    name: ส่งข้อมูลแฟ้ม CHRONIC
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"DATE_DIAG": "20200314",
+        		"CHRONIC": "E114",
+        		"HOSP_DX": "11053",
+        		"HOSP_RX": "11053",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881168995.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6e72e20ec29d498e91828b61e491b3bf
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678882338220
+    created: 1678882270761
+    url: "{{ _.apiEndpoint }}/api/standard/v1/opd"
+    name: ส่งข้อมูลแฟ้ม OPD
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        [{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"CLINIC": "10",
+        		"DATE_SERV": "20230106",
+        		"TIME_SERV": "123000",
+        		"SEQ": "660110345678990",
+        		"CHIEFCOMP": "ปวดหัว เป็นไข้มา 3 วัน",
+        		"BTEMP": 32,
+        		"SBP": 100,
+        		"DBP": 80,
+        		"PR": 55,
+        		"RR": 55,
+        		"TYPEIN": "2",
+        		"TYPEOUT": "1",
+        		"INS_TYPE": "79",
+        		"INS_NUMBER": "890000912",
+        		"INS_HOSPMAIN": "10707",
+        		"INS_HOSPSUB": "11054",
+        		"DIAG_TEXT": "Diag text",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881135271.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_506983b8acfc4be295dc1a74e9f888d7
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678882578077
+    created: 1678882482479
+    url: "{{ _.apiEndpoint }}/api/standard/v1/opdx"
+    name: ส่งข้อมูลแฟ้ม OPDX
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"SEQ": "660110345678990",
+        		"DATEDX": "20230301",
+        		"DIAG": "Z000",
+        		"DXTYPE": "1",
+        		"PROVIDER": "101",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881101547.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2df0233977834ef0a4ff18af654c4f05
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678882823895
+    created: 1678882768224
+    url: "{{ _.apiEndpoint }}/api/standard/v1/opop"
+    name: ส่งข้อมูลแฟ้ม OPOP
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"SEQ": "660110345678990",
+        		"DATEOP": "20230301",
+        		"OPER": "9090",
+        		"SERVPRICE": 99.99,
+        		"PROVIDER": "101",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881084685.0625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3e07042995a747e5ac6ce0346c76397b
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678882949119
+    created: 1678882856973
+    url: "{{ _.apiEndpoint }}/api/standard/v1/opdrug"
+    name: ส่งข้อมูลแฟ้ม OPDRUG
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"SEQ": "660110345678990",
+        		"DID": "30002",
+        		"AMOUNT": 20,
+        		"DRUGPRICE": 99.99,
+        		"DRUGCOST": 80.89,
+        		"UNIT": "เม็ด",
+        		"UNIT_PACK":"แผง",
+        		"SIGCODE": "2010",
+        		"PROVIDER": "101",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881076254.0312
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_63d6d4f6bb69484ea7773ce8fff377c6
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678883425466
+    created: 1678883305267
+    url: "{{ _.apiEndpoint }}/api/standard/v1/ipd"
+    name: ส่งข้อมูลแฟ้ม IPD
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"AN": "66000090",
+        		"DATEADM": "20230314",
+        		"TIMEADM": "0930",
+        		"DATEDSC": "20230315",
+        		"TIMEDSC": "1030",
+        		"DISCHS": "1",
+        		"DISCHT": "1",
+        		"DEPT": "1001",
+        		"WARDDSC": "101",
+        		"ADM_W": 55000,
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881075200.1523
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_310c6879790542c6996a9d2ee25aa9b0
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678883280988
+    created: 1678883267052
+    url: "{{ _.apiEndpoint }}/api/standard/v1/ipdrug"
+    name: ส่งข้อมูลแฟ้ม IPDRUG
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"AN": "66000090",
+        		"DID": "30002",
+        		"AMOUNT": 20,
+        		"DRUGPRICE": 99.99,
+        		"DRUGCOST": 80.89,
+        		"UNIT": "เม็ด",
+        		"UNIT_PACK":"แผง",
+        		"SIGCODE": "2010",
+        		"PROVIDER": "101",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881074146.2734
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_35132395da614b1c8b6a400368760b19
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678883247348
+    created: 1678883209081
+    url: "{{ _.apiEndpoint }}/api/standard/v1/ipdx"
+    name: ส่งข้อมูลแฟ้ม IPDX
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"AN": "66000090",
+        		"DIAG": "J00",
+        		"DXTYPE": "1",
+        		"PROVIDER": "101",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881068876.879
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_60509abf21d74ac2b0273c3a664d0304
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678883674372
+    created: 1678883082550
+    url: "{{ _.apiEndpoint }}/api/standard/v1/ipop"
+    name: ส่งข้อมูลแฟ้ม IPOP
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"AN": "66000090",
+        		"OPER": "9302",
+        		"OPTYPE": "1",
+        		"PROVIDER": "101",
+        		"DATEIN": "20230304",
+        		"TIMEIN": "093200",
+        		"DATEOUT": "20230304",
+        		"TIMEOUT": "103000",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881068864.379
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1e39941171744512b9c58ee532e68710
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678883668934
+    created: 1678883537033
+    url: "{{ _.apiEndpoint }}/api/standard/v1/appoint"
+    name: ส่งข้อมูลแฟ้ม APPOINT
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"AN": "660000909",
+        		"SEQ": "660099909900",
+        		"APPOINT_DATE": "20200314",
+        		"APPOINT_TIME": "1030",
+        		"CLINIC": "101",
+        		"REMARK": "นัดตรวจหลังคลอด",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881068851.879
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_55496e5a70fe49ecaa290ba30b06d049
+    parentId: fld_8b42d437d0854126bda5146cc71d59e9
+    modified: 1678883659817
+    created: 1678882996455
+    url: "{{ _.apiEndpoint }}/api/standard/v1/lab"
+    name: ส่งข้อมูลแฟ้ม LAB
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"HOSPCODE": "11053",
+        		"HN": "0041245",
+        		"SEQ": "660110345678990",
+        		"LABTEST": "302",
+        		"LABRESULT": "POSITIVE",
+        		"D_UPDATE": "20230114100900"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1678881068826.879
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eed0fb4dfec7495a9adb591c38d01999
+    parentId: wrk_17c3b1cf7360414db8cf9750a65feaf5
+    modified: 1678882111712
+    created: 1678881337616
+    url: "{{ _.apiEndpoint }}/api/standard/v1/health-check"
+    name: Health check
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1678881337616
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9c7270e7a498419991f917361e31b6b2
+    parentId: wrk_17c3b1cf7360414db8cf9750a65feaf5
+    modified: 1678881870569
+    created: 1678881067823
+    url: "{{ _.apiEndpoint }}/auth/request"
+    name: Request token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_a55be4fefca9496f8b514fe74fe5b8a8
+          name: username
+          value: "11053"
+          description: ""
+        - id: pair_266095e19d6e4a198990cdf16854e6dd
+          name: password
+          value: "11111111"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+    authentication: {}
+    metaSortKey: -1678881067823
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cd840560e29d424b9e96faed80107b2b
+    parentId: wrk_17c3b1cf7360414db8cf9750a65feaf5
+    modified: 1678882019857
+    created: 1678881247607
+    url: "{{ _.apiEndpoint }}/auth/token/refresh_token"
+    name: Refresh token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_132f307a21cd4ef397b3e3b0e8cd6ed4
+          name: refresh_token
+          value: i2MnS1t80gosyi9yvwOGx36FSBYnJ45FyugTd26V4Y4eHcaDQmWhr1CWxMxMOuPX
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+    authentication: {}
+    metaSortKey: -1678825152759.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_0c7f80c0fc13baa4325eb4f2d9a169cf44f4862d
+    parentId: wrk_17c3b1cf7360414db8cf9750a65feaf5
+    modified: 1678882237853
+    created: 1678880994189
+    name: Base Environment
+    data:
+      apiEndpoint: https://r7.moph.go.th/platform/test
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMmM1ODk0Ni0yMzQ1LTRmYmQtOGYzZi0yODc1ZGViOTNjN2YiLCJpbmdyZXNzX3pvbmUiOiJNQUhBU0FSQUtIQU1fVm5ZaDMyMFMiLCJob3NwY29kZSI6IjExMDUzIiwiaXNzIjoicjdwbGF0Zm9ybS1zZW5kLm1vcGguZ28udGgiLCJpYXQiOjE2Nzg4ODIyMjYsImV4cCI6MTY3ODg4NTgyNn0.H57jj0jn-wmEGHEuKAJv0zO4V0yqsTg6wWjMtn0CQpA
+    dataPropertyOrder:
+      "&":
+        - apiEndpoint
+        - token
+    color: null
+    isPrivate: false
+    metaSortKey: 1678880994189
+    _type: environment
+  - _id: jar_0c7f80c0fc13baa4325eb4f2d9a169cf44f4862d
+    parentId: wrk_17c3b1cf7360414db8cf9750a65feaf5
+    modified: 1678880994195
+    created: 1678880994195
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_47ad0420aae046c695ec22015c5fc6ec
+    parentId: wrk_17c3b1cf7360414db8cf9750a65feaf5
+    modified: 1678880994178
+    created: 1678880994178
+    fileName: API ส่งข้อมูล
+    contents: ""
+    contentType: yaml
+    _type: api_spec
