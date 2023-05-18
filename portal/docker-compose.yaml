@@ -32,7 +32,7 @@ services:
       - R7PLATFORM_PORTAL_API_DB_RAW_USER=postgres
       - R7PLATFORM_PORTAL_API_DB_RAW_PASSWORD=xxxxxx
       - R7PLATFORM_PORTAL_API_SECRET_KEY=xxxxx32bitxxxxx
-      - R7PLATFORM_PORTAL_API_LOGIN_ENDPOINT=https://r7.moph.go.th/platform/auth
+      - R7PLATFORM_PORTAL_API_LOGIN_ENDPOINT=https://r7.moph.go.th/platform/test/auth
     restart: always
     extra_hosts: 
       - "host.docker.internal:host-gateway"
